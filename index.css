@@ -1,0 +1,77 @@
+body {
+    margin: 0; /* remove default white space */
+    min-height: 100vh; /* full viewport height */
+    
+    background-image: url("imagebg.png");
+    background-size: cover;        /* make it fill the screen */
+    background-position: center;   /* keep it centered */
+    background-repeat: no-repeat;  /* no tiling */
+  }
+  
+  /* Navbar base */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6); /* translucent black */
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px); /* adds a nice blur effect behind */
+    
+    /* Slide down animation on page load */
+    animation: slideDown 0.8s ease forwards;
+  }
+  
+  /* Navbar list styling */
+  .navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 100px;
+  }
+  
+  /* Navbar links */
+  .navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  /* Hover underline animation */
+  .navbar ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: yellow; /* Minion theme accent */
+    transition: width 0.3s ease;
+  }
+  
+  .navbar ul li a:hover {
+    color: yellow; /* text color change on hover */
+  }
+  
+  .navbar ul li a:hover::after {
+    width: 100%;
+  }
+  
+  /* Slide down animation keyframes */
+  @keyframes slideDown {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
