@@ -16,7 +16,7 @@ a{
     text-align:center;
     opacity:0.7;
     transition-duration: 0.5s;
-    text-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 30px yellow;
+    text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white;
 }
 
 nav{
@@ -42,6 +42,7 @@ nav{
 a:hover{
     opacity: 1;
     color:yellow;
+    text-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 30px yellow;
 }
 
 .bgimage img {
@@ -90,11 +91,11 @@ a:hover{
 #english {
     height: 300px;
     width: 300px;
-    top: 700px;
+    top: 750px;
     right:20px;
     background-color:yellow;
     position:absolute;
-    background-image: url("minion_english.png");
+    background-image: url("minion_eng.jpg");
     align-items: center;
     justify-content: center;
     transition: 1s;
@@ -105,7 +106,7 @@ a:hover{
 #english:hover{
     font-size: 52px;
     background-color: yellow;
-    background-image: url("minion_english.png");
+    background-image: url("minion_eng.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     align-items: center;
@@ -113,6 +114,24 @@ a:hover{
     transition: ease-in-out;
 }
 
-#History {
-    background-color: black;
+#drawing{
+    height: 300px;
+    width: 300px;
+    top:1450px;
+    background-color:white;
+    position:absolute;
+    background-image: url("minion_drawing.jpg");
+    align-items: center;
+    justify-content: center;
+    transition: 1s;
+    background-position: center;
+    background-size: cover;
+} 
+#drawing:hover {
+    font-size: 52px;
+    background-color: yellow;
+    background-image: url("minion_drawing.jpg");
+    background-size: cover;
+    align-items: center;
+    border-radius: 50%;
 }
