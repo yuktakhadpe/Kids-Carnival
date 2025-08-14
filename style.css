@@ -14,7 +14,7 @@ a{
     color:antiquewhite;
     margin:50px;
     text-align:center;
-    opacity:0.7;
+    opacity:1;
     transition-duration: 0.5s;
     text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white;
 }
@@ -24,10 +24,10 @@ nav{
     top:0;
     left:0;
     width:100%;
-    height:40px;
-    background-color:rgb(39, 36, 36,0.6);
+    height:45px;
+    background-color:rgb(39, 36, 36,0.7);
     text-align: center;
-    padding-top:8px;
+    padding-top:15px;
     transition-duration: 0.5s;
     
 }
@@ -76,6 +76,8 @@ a:hover{
     transition: 1s;
     background-position: center;
     background-size: cover;
+    color:yellow;
+    font-size: 30px;
 } 
 #maths:hover {
     font-size: 52px;
@@ -84,6 +86,7 @@ a:hover{
     background-size: cover;
     align-items: center;
     border-radius: 50%;
+    color:yellow;
 }
 
 
@@ -101,7 +104,11 @@ a:hover{
     transition: 1s;
     background-position: center;
     background-size: cover;
+    color:yellow;
+    border-radius:10px;
+    
 }
+
 
 #english:hover{
     font-size: 52px;
@@ -111,7 +118,7 @@ a:hover{
     background-repeat: no-repeat;
     align-items: center;
     border-radius: 50%;
-    transition: ease-in-out;
+    color:darkblue;
 }
 
 #drawing{
@@ -126,6 +133,8 @@ a:hover{
     transition: 1s;
     background-position: center;
     background-size: cover;
+    color:white;
+    border-radius:10px;
 } 
 #drawing:hover {
     font-size: 52px;
@@ -134,4 +143,23 @@ a:hover{
     background-size: cover;
     align-items: center;
     border-radius: 50%;
+    color:yellow;
+}
+
+#maths_text{
+    position:absolute;
+    top: 60px;
+    left:500px;
+}
+
+#english_text{
+    position:absolute;
+    top:60px;
+    right :500px;;
+}
+
+#drawing_text{
+    position: absolute;
+    top:60px;
+    left: 500px;
 }
