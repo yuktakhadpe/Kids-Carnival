@@ -17,6 +17,7 @@ a{
     opacity:1;
     transition-duration: 0.5s;
     text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white;
+    font-size: 18px ;
 }
 
 nav{
