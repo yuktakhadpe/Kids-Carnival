@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Minion English Spelling Game</title>
+  <link rel="stylesheet" href="english.css">
+</head>
+<body>
+  <h1 class="title">Minion English Spelling Game </h1>
+
+      <div id="timer">⏳ Time Left: <span id="time">15</span>s</div>
+      <div class="progress-bar">
+        <div id="progress"></div>
+      </div>
+
+      <button id="music-btn">🔊 Music: On</button>
+
+  <div id="quiz-box" class="quiz-box">
+    <h2 id="question"></h2>
+    <div id="answers" class="answers"></div>
+    <button id="next-btn" class="next-btn">Next</button>
+  </div>
+
+  <div id="result-box" class="result-box hidden">
+    <h2 id="final-score"></h2>
+    <button onclick="restartGame()" class="restart-btn">Play Again</button>
+  </div>
+
+  <!-- Audio -->
+  <audio id="correct-sound" src="correct.mp3"></audio>
+  <audio id="wrong-sound" src="wrong.mp3"></audio>
+  <audio id="bg-music" src="bg_music.mp3" autoplay loop></audio>
+
+  <script src="english.js"></script>
+</body>
+</html>
+

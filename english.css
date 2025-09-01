@@ -1,0 +1,133 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: url("Maths.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+  height: 100vh;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#music-btn {
+  padding: 10px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 8px;
+  background: #fdd835;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin: 20px;
+  color: #ffcc00;
+  text-shadow: 2px 2px #000;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+}
+
+.timer {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #004aad;
+}
+
+.music-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(45deg, #ffcc00, #ffe066);
+  color: #004aad;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+.music-btn:hover {
+  transform: scale(1.1);
+  background: linear-gradient(45deg, #ffe066, #ffcc00);
+}
+
+.quiz-box {
+  margin: 40px auto;
+  padding: 20px;
+  width: 60%;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 20px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+#question {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #004aad;
+}
+
+.answers button {
+  display: block;
+  margin: 10px auto;
+  padding: 12px 20px;
+  border-radius: 15px;
+  border: none;
+  background: #ffeb3b;
+  color: #004aad;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+.answers button:hover {
+  transform: scale(1.1);
+  background: #ffe066;
+}
+
+.next-btn, .restart-btn {
+  margin-top: 20px;
+  padding: 12px 25px;
+  border-radius: 20px;
+  border: none;
+  background: #004aad;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+.next-btn:hover, .restart-btn:hover {
+  transform: scale(1.1);
+  background: #00307a;
+}
+
+.result-box {
+  margin: 40px auto;
+  padding: 20px;
+  width: 60%;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+}
+
+.result-img {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+#next-btn { 
+    display: block;
+     margin: 20px auto;
+     }
+
+
