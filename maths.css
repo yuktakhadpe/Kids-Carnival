@@ -1,0 +1,153 @@
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background: url('Maths_bg.png') no-repeat center center fixed;
+  background-size: cover;
+  color: rgb(29, 29, 27);
+  text-align: center;
+}
+
+.overlay {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.game-container {
+  padding: 20px;
+  max-width: 500px;
+  width: 100%;
+  background: #ffffffd9;
+  border-radius: 20px;
+  box-shadow: 0px 5px 20px rgba(0,0,0,0.3);
+}
+
+h1 {
+  color: #fdd835;
+  text-shadow: 2px 2px #000;
+  font-size: 28px;
+}
+
+#timer {
+  font-size: 20px;
+  margin: 10px 0;
+  color: #f57f17;
+  font-weight: bold;
+}
+
+/* Progress Bar */
+.progress-bar {
+  width: 100%;
+  height: 12px;
+  background: #eee;
+  border-radius: 8px;
+  margin: 10px 0 15px;
+  overflow: hidden;
+}
+
+#progress {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to right, #76ff03, #fdd835);
+  transition: width 1s linear;
+}
+
+#music-btn {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 8px;
+  background: #fdd835;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#music-btn:hover {
+  background: #fbc02d;
+}
+
+#quiz-box p {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 25px 0;
+}
+
+#answers {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background-color: #fdd835;
+  color: #222;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background-color: #fbc02d;
+}
+
+.hidden {
+  display: none;
+}
+
+.minion-img {
+  width: 180px;
+  margin-top: 20px;
+  animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+  from { transform: translateY(0); }
+  to { transform: translateY(-15px); }
+}
+
+/* Floating banana animation */
+.banana {
+  position: absolute;
+  font-size: 40px;
+  animation: floatUp 1.5s ease-out forwards;
+}
+
+@keyframes floatUp {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(-100px); }
+}
+
+/* 📱 Responsive */
+@media (max-width: 600px) {
+  .game-container {
+    max-width: 95%;
+    padding: 15px;
+  }
+  h1 {
+    font-size: 22px;
+  }
+  #quiz-box p {
+    font-size: 22px;
+  }
+  button {
+    font-size: 16px;
+    padding: 12px;
+  }
+}
+
+#next-btn {
+  display: block;
+  margin: 20px auto; 
+}
+
+
+
+
