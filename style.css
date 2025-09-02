@@ -90,7 +90,16 @@ a:hover{
     color:yellow;
 }
 
-
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
 
 #english {
     height: 300px;
@@ -116,7 +125,7 @@ a:hover{
     background-color: yellow;
     background-image: url("minion_eng.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
     align-items: center;
     border-radius: 50%;
     color:darkblue;
@@ -137,6 +146,7 @@ a:hover{
     color:white;
     border-radius:10px;
 } 
+
 #drawing:hover {
     font-size: 52px;
     background-color: yellow;

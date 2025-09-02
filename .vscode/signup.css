@@ -1,0 +1,91 @@
+/* Background */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+  }
+  
+  .background {
+    background: linear-gradient(to top, #a3e6ff, #ffffff);
+    background-image: url("kids-bg.png"); /* Replace with your background image */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Sign Up Card */
+  .signup-card {
+    background: #fff8e7;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    text-align: center;
+    width: 320px;
+  }
+  
+  .signup-card h1 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Inputs */
+  .signup-card input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #ffaf40;
+    border-radius: 15px;
+    outline: none;
+    font-size: 16px;
+  }
+  
+  .signup-card input:focus {
+    border-color: #ff7f50;
+  }
+  
+  /* Button */
+  .signup-card button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background: #ff7f50;
+    border: none;
+    color: white;
+    font-size: 18px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  .signup-card input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #ffaf40;
+    border-radius: 15px;
+    outline: none;
+    font-size: 16px;
+    text-align: center; /* ✅ Centers placeholder & typed text */
+    display: block;     /* Ensures full width */
+    box-sizing: border-box;
+  }
+  
+  .signup-card button:hover {
+    background: #ff5722;
+  }
+  
+  .signup-card p {
+    margin-top: 15px;
+    font-size: 14px;
+  }
+  
+  .signup-card a {
+    color: #ff7f50;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
