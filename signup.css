@@ -1,5 +1,4 @@
-/* Background */
-body, html {
+body {
     margin: 0;
     padding: 0;
     height: 100%;
@@ -7,8 +6,7 @@ body, html {
   }
   
   .background {
-    background: linear-gradient(to top, #a3e6ff, #ffffff);
-    background-image: url("kids-bg.png"); /* Replace with your background image */
+    background-image: url("stripbg.png"); 
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -17,7 +15,6 @@ body, html {
     align-items: center;
   }
   
-  /* Sign Up Card */
   .signup-card {
     background: #fff8e7;
     padding: 30px;
@@ -28,11 +25,10 @@ body, html {
   }
   
   .signup-card h1 {
-    color: #333;
-    margin-bottom: 20px;
+    color: #f98807;
+    margin-bottom: 30px;
   }
   
-  /* Inputs */
   .signup-card input {
     width: 100%;
     padding: 12px;
@@ -47,7 +43,7 @@ body, html {
     border-color: #ff7f50;
   }
   
-  /* Button */
+  
   .signup-card button {
     width: 100%;
     padding: 12px;
@@ -69,8 +65,8 @@ body, html {
     border-radius: 15px;
     outline: none;
     font-size: 16px;
-    text-align: center; /* ✅ Centers placeholder & typed text */
-    display: block;     /* Ensures full width */
+    text-align: center; 
+    display: block;     
     box-sizing: border-box;
   }
   

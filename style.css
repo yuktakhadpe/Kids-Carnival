@@ -39,7 +39,6 @@ nav{
     background-size: cover; 
     background-position: center;
 }
-
 a:hover{
     opacity: 1;
     color:yellow;
@@ -90,16 +89,7 @@ a:hover{
     color:yellow;
 }
 
-@keyframes appear {
-    from {
-        opacity: 0;
-        scale: 0.5;
-    }
-    to {
-        opacity: 1;
-        scale: 1;
-    }
-}
+
 
 #english {
     height: 300px;
@@ -114,8 +104,9 @@ a:hover{
     transition: 1s;
     background-position: center;
     background-size: cover;
-    color:yellow;
+    color:darkblue;
     border-radius:10px;
+    font-size: 30px;
     
 }
 
@@ -125,7 +116,6 @@ a:hover{
     background-color: yellow;
     background-image: url("minion_eng.jpg");
     background-size: cover;
-    /* background-repeat: no-repeat; */
     align-items: center;
     border-radius: 50%;
     color:darkblue;
@@ -143,8 +133,9 @@ a:hover{
     transition: 1s;
     background-position: center;
     background-size: cover;
-    color:white;
+    color:yellow;
     border-radius:10px;
+    font-size: 30px;
 } 
 
 #drawing:hover {
@@ -173,4 +164,15 @@ a:hover{
     position: absolute;
     top:60px;
     left: 500px;
+}
+
+.text:hover{
+    text-decoration: none;
+    text-shadow: 0 0 0px, 0 0 0px, 0 0 0px;
+}
+.text{
+    text-decoration: none;
+    color:yellow;
+    display: block;
+     text-shadow: 0 0 0px, 0 0 0px, 0 0 0px;
 }
