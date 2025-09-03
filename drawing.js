@@ -59,7 +59,7 @@ const canvas = document.getElementById("drawingCanvas");
 const ctx = canvas.getContext("2d");
 
 let drawing = false;
-let currentColor = "black"; // default color
+let currentColor = "black"; 
 
 canvas.addEventListener("mousedown", startDrawing);
 canvas.addEventListener("mouseup", stopDrawing);
@@ -88,13 +88,12 @@ function draw(e) {
   ctx.moveTo(e.offsetX, e.offsetY);
 }
 
-// 🎨 Change color
+
 function setColor(color) {
   currentColor = color;
   document.getElementById("status").textContent = `Selected color: ${color}`;
 }
 
-// 🧽 Eraser (set color to white)
 function useEraser() {
   currentColor = "white";
   document.getElementById("status").textContent = "Eraser selected!";

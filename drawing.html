@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drawing Game</title>
+  <link rel="stylesheet" href="drawing.css">
+</head>
+<body>
+  <div class="quiz-container">
+    <h1>🎨 Drawing Game</h1>
+    
+    <canvas id="drawingCanvas" width="280" height="280"></canvas>
+    
+
+    <div class="colors">
+      <button class="color" style="background: black;" onclick="setColor('black')"></button>
+      <button class="color" style="background: red;" onclick="setColor('red')"></button>
+      <button class="color" style="background: blue;" onclick="setColor('blue')"></button>
+      <button class="color" style="background: green;" onclick="setColor('green')"></button>
+      <button class="color" style="background: orange;" onclick="setColor('orange')"></button>
+      <button class="color" style="background: purple;" onclick="setColor('purple')"></button>
+      <button class="eraser" onclick="useEraser()">🧽</button>
+    </div>
+
+    <div class="buttons">
+      <button onclick="clearCanvas()">Clear</button>
+      <button onclick="saveDrawing()">Save</button>
+      <button onclick="restartGame()">Play Again</button>
+    </div>
+
+    <p id="status">Pick a color and start drawing!</p>
+  </div>
+
+  <script src="drawing.js"></script>
+</body>
+</html>

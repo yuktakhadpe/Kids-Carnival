@@ -1,0 +1,85 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    overflow-x: hidden;
+  }
+  
+  .background {
+    background: linear-gradient(to top, #a3e6ff, #ffffff);
+    min-height: 100vh;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .cloud {
+    width: 150px;
+    height: 80px;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    animation: floatClouds 60s linear infinite;
+    box-shadow: 60px 20px 0 #fff, 120px 10px 0 #fff, 90px 40px 0 #fff;
+    opacity: 0.8;
+  }
+  
+  .cloud1 { top: 60px; left: -200px; animation-delay: 0s; }
+  .cloud2 { top: 120px; left: -300px; animation-delay: 15s; }
+  .cloud3 { top: 200px; left: -250px; animation-delay: 30s; }
+  
+  @keyframes floatClouds {
+    from { transform: translateX(0); }
+    to { transform: translateX(120vw); }
+  }
+  
+  header h1 {
+    font-size: 3rem;
+    color: #ff6f61;
+    animation: bounce 2s infinite;
+  }
+  
+  header p {
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  .fun-facts {
+    background: #fff0f5;
+    padding: 40px 20px;
+    margin: 40px 0;
+  }
+  
+  .fun-facts h2 {
+    color: #ff1493;
+    margin-bottom: 20px;
+  }
+  
+  .facts-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .fact {
+    background: #ffe4e1;
+    padding: 15px 20px;
+    border-radius: 15px;
+    font-size: 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    animation: pop 2s infinite alternate;
+  }
+  
+  @keyframes pop {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.05); }
+  }
+  
+ 

@@ -1,0 +1,90 @@
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fffbea;
+  color: #333;
+  background-image: url("stripbg.png");
+}
+
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 25px;
+  background: #ffffff;
+  border: 3px solid #ffd60a;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+
+h1 {
+  color: #ffd60a;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #444;
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+
+.form-group {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+input,
+textarea {
+  width: 80%;             
+  margin: 0 auto;        
+  display: block;          
+  padding: 12px;
+  border: 2px solid #ffd60a;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #ffb703;
+  box-shadow: 0 0 8px rgba(255, 183, 3, 0.5);
+}
+
+
+.btn {
+  background-color: #ffd60a;
+  color: #333;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #ffb703;
+}
+
+
+.success-message {
+  margin-top: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: green;
+}
