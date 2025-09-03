@@ -4,8 +4,6 @@ const nextButton = document.getElementById("next-btn");
 const resultBox = document.getElementById("result-box");
 const finalScoreElement = document.getElementById("final-score");
 
-const correctSound = document.getElementById("correct-sound");
-const wrongSound = document.getElementById("wrong-sound");
 const bgMusic = document.getElementById("bg-music");
 const musicBtn = document.getElementById("music-btn");
 
@@ -18,7 +16,7 @@ let musicOn = true;
 let totalTime = 30; 
 let gameTimer;
 
-// ✅ Mix of one-digit & two-digit questions
+
 const questions = [
   { q: "5 + 3 = ?", options: [6, 8, 9, 7], answer: 8 },
   { q: "12 - 7 = ?", options: [4, 5, 6, 7], answer: 5 },
@@ -31,35 +29,32 @@ const questions = [
   { q: "81 / 9 = ?", options: [6, 7, 8, 9], answer: 9 }
 ];
 
-// 🎮 Start game
 function startGame() {
   currentQuestionIndex = 0;
   score = 0;
   resultBox.classList.add("hidden");
   document.getElementById("quiz-box").classList.remove("hidden");
-  startGameTimer();   // ✅ start countdown
+  startGameTimer(); 
   showQuestion();
 }
 
-// ⏳ Global Game Timer (1 minute)
 function startGameTimer() {
   clearInterval(gameTimer);
-  totalTime = 30; // reset
+  totalTime = 30;
   timerElement.textContent = totalTime;
 
   gameTimer = setInterval(() => {
     totalTime--;
     timerElement.textContent = totalTime;
-    progressBar.style.width = (totalTime / 30) * 100 + "%"; // ✅ update progress bar
+    progressBar.style.width = (totalTime / 30) * 100 + "%"; 
 
     if (totalTime <= 0) {
       clearInterval(gameTimer);
-      showResult(); // ✅ end game
+      showResult();
     }
   }, 1000);
 }
 
-// 📖 Show current question
 function showQuestion() {
   resetState();
 
@@ -74,39 +69,24 @@ function showQuestion() {
   });
 }
 
-// 🔄 Reset for next question
+
 function resetState() {
   nextButton.style.display = "none";
   answersContainer.innerHTML = "";
 }
 
-// ✅ Handle Answer Selection
 function selectAnswer(selected, correct) {
   if (selected === correct) {
     score++;
-    correctSound.play();
     document.body.style.background = "linear-gradient(to bottom, #0dfe29ff, #fff947ff)";
-    showBanana();
   } else {
-    wrongSound.play();
     document.body.style.background = "linear-gradient(to bottom, #f21f10ff, #ffeb3b)";
   }
   nextButton.style.display = "block";
 }
 
-// 🎉 Banana Animation
-function showBanana() {
-  const banana = document.createElement("div");
-  banana.classList.add("banana");
-  banana.textContent = "Huraah!";
-  banana.style.left = Math.random() * 80 + "vw";
-  banana.style.top = "60vh";
-  document.body.appendChild(banana);
 
-  setTimeout(() => banana.remove(), 1500);
-}
 
-// ➡️ Next Question
 function goNextQuestion() {
   document.body.style.background = "url('Maths_bg.png') no-repeat center center fixed";
   document.body.style.backgroundSize = "cover";
@@ -120,7 +100,6 @@ function goNextQuestion() {
 
 nextButton.addEventListener("click", goNextQuestion);
 
-// 📊 Show Result
 function showResult() {
   clearInterval(gameTimer);
   document.getElementById("quiz-box").classList.add("hidden");
@@ -128,12 +107,12 @@ function showResult() {
   finalScoreElement.textContent = `🎉 Your Score: ${score}/${questions.length} 🎉`;
 }
 
-// 🔁 Restart
+
 function restartGame() {
   startGame();
 }
 
-// 🎵 Music Toggle
+
 musicBtn.addEventListener("click", () => {
   if (musicOn) {
     bgMusic.pause();
@@ -145,7 +124,7 @@ musicBtn.addEventListener("click", () => {
   musicOn = !musicOn;
 });
 
-// 🚀 Start game on load
+
 startGame();
 
 

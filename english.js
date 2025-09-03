@@ -1,23 +1,23 @@
+
 const questionElement = document.getElementById("question");
 const answersContainer = document.getElementById("answers");
 const nextButton = document.getElementById("next-btn");
 const resultBox = document.getElementById("result-box");
 const finalScoreElement = document.getElementById("final-score");
 
-const correctSound = document.getElementById("correct-sound");
-const wrongSound = document.getElementById("wrong-sound");
 const bgMusic = document.getElementById("bg-music");
 const musicBtn = document.getElementById("music-btn");
 
 const timerElement = document.getElementById("time");
+const progressBar = document.getElementById("progress");
 
 let currentQuestionIndex = 0;
 let score = 0;
-let totalTime = 60; // 30 seconds
-let gameTimer;
 let musicOn = true;
+let totalTime = 60; 
+let gameTimer;
 
-// ✅ English Spelling Questions
+
 const questions = [
   { q: "Correct spelling of 🐘 ?", options: ["Elefant", "Elephant", "Eliphant", "Elephent"], answer: "Elephant" },
   { q: "Correct spelling of 🍌 ?", options: ["Bananna", "Banana", "Bannana", "Banan"], answer: "Banana" },
@@ -46,7 +46,7 @@ function startGame() {
   score = 0;
   resultBox.classList.add("hidden");
   document.getElementById("quiz-box").classList.remove("hidden");
-  startGameTimer();
+  startGameTimer(); 
   showQuestion();
 }
 
@@ -58,6 +58,7 @@ function startGameTimer() {
   gameTimer = setInterval(() => {
     totalTime--;
     timerElement.textContent = totalTime;
+    progressBar.style.width = (totalTime / 60) * 100 + "%"; 
 
     if (totalTime <= 0) {
       clearInterval(gameTimer);
@@ -68,6 +69,7 @@ function startGameTimer() {
 
 function showQuestion() {
   resetState();
+
   let current = questions[currentQuestionIndex];
   questionElement.textContent = current.q;
 
@@ -79,6 +81,7 @@ function showQuestion() {
   });
 }
 
+
 function resetState() {
   nextButton.style.display = "none";
   answersContainer.innerHTML = "";
@@ -87,14 +90,14 @@ function resetState() {
 function selectAnswer(selected, correct) {
   if (selected === correct) {
     score++;
-    correctSound.play();
-    document.body.style.background = "linear-gradient(to bottom, #2dfd45ff, #fff947ff)";
+    document.body.style.background = "linear-gradient(to bottom, #0dfe29ff, #fff947ff)";
   } else {
-    wrongSound.play();
     document.body.style.background = "linear-gradient(to bottom, #f21f10ff, #ffeb3b)";
   }
   nextButton.style.display = "block";
 }
+
+
 
 function goNextQuestion() {
   document.body.style.background = "url('Maths.jpg') no-repeat center center fixed";
@@ -110,14 +113,17 @@ function goNextQuestion() {
 nextButton.addEventListener("click", goNextQuestion);
 
 function showResult() {
+  clearInterval(gameTimer);
   document.getElementById("quiz-box").classList.add("hidden");
   resultBox.classList.remove("hidden");
-  finalScoreElement.textContent = `🎉Your Score: ${score}/${questions.length}🎉`;
+  finalScoreElement.textContent = `🎉 Your Score: ${score}/${questions.length} 🎉`;
 }
+
 
 function restartGame() {
   startGame();
 }
+
 
 musicBtn.addEventListener("click", () => {
   if (musicOn) {
@@ -130,5 +136,6 @@ musicBtn.addEventListener("click", () => {
   musicOn = !musicOn;
 });
 
-// Start on load
+
 startGame();
+

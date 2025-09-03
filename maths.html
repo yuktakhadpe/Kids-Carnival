@@ -11,23 +11,19 @@
     <div class="game-container">
       <h1> Minion Math Quiz </h1>
 
-      <!-- Timer + Progress Bar -->
       <div id="timer">⏳ Time Left: <span id="time">15</span>s</div>
       <div class="progress-bar">
         <div id="progress"></div>
       </div>
 
-      <!-- Music Toggle -->
       <button id="music-btn">🔊 Music: On</button>
 
-      <!-- Quiz Area -->
       <div id="quiz-box">
         <p id="question"></p>
         <div id="answers"></div>
         <button id="next-btn">Next</button>
       </div>
 
-      <!-- Result Area -->
       <div id="result-box" class="hidden">
         <h2 id="final-score"></h2>
         <button onclick="restartGame()">Play Again</button>
@@ -35,9 +31,6 @@
     </div>
   </div>
 
-  <!-- Sounds -->
-  <audio id="correct-sound" src="https://www.myinstants.com/media/sounds/minions-banana.mp3" preload="auto"></audio>
-  <audio id="wrong-sound" src="https://www.fesliyanstudios.com/play-mp3/6723" preload="auto"></audio>
   <audio id="bg-music" src="bg_music.mp3" autoplay loop></audio>
 
   <script src="maths.js"></script>
