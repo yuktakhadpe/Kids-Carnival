@@ -1,178 +1,208 @@
-*{
-    padding:none;
-    margin:0;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-body{
-    background-color:yellow;
-
-    
+body {
+    background-color: yellow;
 }
 
-a{
+a {
     text-decoration: none;
-    color:antiquewhite;
-    margin:50px;
-    text-align:center;
-    opacity:1;
+    color: antiquewhite;
+    margin: 15px;
+    text-align: center;
+    opacity: 1;
     transition-duration: 0.5s;
     text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white;
-    font-size: 18px ;
+    font-size: 18px;
 }
 
-nav{
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:45px;
-    background-color:rgb(39, 36, 36,0.7);
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 45px;
+    background-color: rgba(39, 36, 36, 0.7);
     text-align: center;
-    padding-top:15px;
+    padding: 12px 10px;
     transition-duration: 0.5s;
-    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    z-index: 10;
 }
 
-.bgimage{
-    position:relative;
-    
-    background-size: cover; 
+.bgimage {
+    position: relative;
+    background-size: cover;
     background-position: center;
 }
-a:hover{
+
+a:hover {
     opacity: 1;
-    color:yellow;
+    color: yellow;
     text-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 30px yellow;
 }
 
 .bgimage img {
-    size:cover;
-    width:100%;
-    align-content: center;
-    margin:none;
-    
-}
-#stripimg{
-    position:relative;
-    
+    width: 100%;
+    display: block;
 }
 
-#stripimg img{
-    size:cover;
-    width:100%;
-    display:block;
-    align-items:center;
+/* STRIP SECTION */
+#stripimg {
+    position: relative;
+}
+
+#stripimg > img {
+    width: 100%;
+    display: block;
+}
+
+/* Desktop: absolute positioning as original */
+#maths, #english, #drawing {
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    transition: 1s;
+    background-position: center;
+    background-size: cover;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #maths {
-    height: 300px;
-    width: 300px;
-    top:50px;
-    background-color:white;
-    position:absolute;
+    top: 50px;
+    left: 20px;
+    background-color: white;
     background-image: url("minion_maths.jpg");
-    align-items: center;
-    justify-content: center;
-    transition: 1s;
-    background-position: center;
-    background-size: cover;
-    color:yellow;
-    font-size: 30px;
-} 
+    color: yellow;
+}
+
 #maths:hover {
     font-size: 52px;
-    background-color: yellow;
-    background-image: url("minion_maths.jpg");
-    background-size: cover;
-    align-items: center;
     border-radius: 50%;
-    color:yellow;
 }
-
-
 
 #english {
-    height: 300px;
-    width: 300px;
     top: 750px;
-    right:20px;
-    background-color:yellow;
-    position:absolute;
-    background-image: url("minion_eng.jpg");
-    align-items: center;
-    justify-content: center;
-    transition: 1s;
-    background-position: center;
-    background-size: cover;
-    color:darkblue;
-    border-radius:10px;
-    font-size: 30px;
-    
-}
-
-
-#english:hover{
-    font-size: 52px;
+    right: 20px;
     background-color: yellow;
     background-image: url("minion_eng.jpg");
-    background-size: cover;
-    align-items: center;
-    border-radius: 50%;
-    color:darkblue;
+    color: darkblue;
+    border-radius: 10px;
 }
 
-#drawing{
-    height: 300px;
-    width: 300px;
-    top:1450px;
-    background-color:white;
-    position:absolute;
+#english:hover {
+    font-size: 52px;
+    border-radius: 50%;
+}
+
+#drawing {
+    top: 1450px;
+    left: 20px;
+    background-color: white;
     background-image: url("minion_drawing.jpg");
-    align-items: center;
-    justify-content: center;
-    transition: 1s;
-    background-position: center;
-    background-size: cover;
-    color:yellow;
-    border-radius:10px;
-    font-size: 30px;
-} 
+    color: yellow;
+    border-radius: 10px;
+}
 
 #drawing:hover {
     font-size: 52px;
-    background-color: yellow;
-    background-image: url("minion_drawing.jpg");
-    background-size: cover;
-    align-items: center;
     border-radius: 50%;
-    color:yellow;
 }
 
-#maths_text{
-    position:absolute;
-    top: 60px;
-    left:500px;
-}
-
-#english_text{
-    position:absolute;
-    top:60px;
-    right :500px;;
-}
-
-#drawing_text{
+#maths_text, #english_text, #drawing_text {
     position: absolute;
-    top:60px;
-    left: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    pointer-events: none;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
-.text:hover{
+.text:hover {
     text-decoration: none;
     text-shadow: 0 0 0px, 0 0 0px, 0 0 0px;
 }
-.text{
+
+.text {
     text-decoration: none;
-    color:yellow;
+    color: yellow;
     display: block;
-     text-shadow: 0 0 0px, 0 0 0px, 0 0 0px;
+    text-shadow: 0 0 0px, 0 0 0px, 0 0 0px;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+    nav {
+        padding: 10px 8px;
+        gap: 2px;
+    }
+
+    nav a {
+        margin: 5px 8px;
+        font-size: 14px;
+    }
+
+    /* Stack cards vertically on mobile */
+    #stripimg {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 80px 20px 30px;
+        background: #ffeb3b;
+    }
+
+    /* Hide long strip image on mobile */
+    #stripimg > img {
+        display: none;
+    }
+
+    #maths, #english, #drawing {
+        position: static;
+        width: 85vw;
+        max-width: 320px;
+        height: 200px;
+        border-radius: 16px !important;
+        font-size: 24px;
+    }
+
+    #maths:hover, #english:hover, #drawing:hover {
+        font-size: 36px;
+        border-radius: 50% !important;
+    }
+
+    #maths_text, #english_text, #drawing_text {
+        position: static;
+        transform: none;
+        font-size: 1.4rem;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .text {
+        width: 85vw;
+        max-width: 320px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    nav a {
+        font-size: 12px;
+        margin: 4px 6px;
+    }
 }

@@ -88,3 +88,28 @@ textarea:focus {
   font-weight: bold;
   color: green;
 }
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .container {
+    margin: 20px auto;
+    padding: 20px 15px;
+    width: 92%;
+  }
+  h1 {
+    font-size: 1.8rem;
+  }
+  input, textarea {
+    width: 95%;
+    font-size: 0.95rem;
+  }
+  .btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+}

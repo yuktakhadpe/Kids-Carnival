@@ -4,8 +4,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
+    padding: 15px;
+    box-sizing: border-box;
   }
   
   .quiz-container {
@@ -14,12 +16,15 @@ body {
     border-radius: 15px;
     box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
     text-align: center;
-    width: 340px;
+    width: 100%;
+    max-width: 340px;
+    box-sizing: border-box;
   }
   
   h1 {
     color: #333;
     margin-bottom: 10px;
+    font-size: clamp(1.2rem, 5vw, 1.6rem);
   }
   
   canvas {
@@ -27,10 +32,15 @@ body {
     border-radius: 10px;
     background: #fff;
     cursor: crosshair;
+    max-width: 100%;
+    touch-action: none;
   }
   
   .colors {
     margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   
   .color {
@@ -47,7 +57,6 @@ body {
     outline: 2px solid #333;
   }
   
-
   .eraser {
     width: 40px;
     height: 40px;
@@ -67,10 +76,13 @@ body {
   
   .buttons {
     margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
   }
   
   .buttons button {
-    margin: 5px;
     padding: 10px;
     background: #ffdb58;
     border: none;
@@ -87,4 +99,24 @@ body {
     margin-top: 15px;
     font-weight: bold;
     color: #555;
+    font-size: clamp(0.85rem, 3vw, 1rem);
+  }
+
+  @media (max-width: 400px) {
+    .quiz-container {
+      padding: 14px;
+    }
+    .color {
+      width: 26px;
+      height: 26px;
+      margin: 4px;
+    }
+    .eraser {
+      width: 36px;
+      height: 36px;
+    }
+    .buttons button {
+      font-size: 14px;
+      padding: 8px;
+    }
   }

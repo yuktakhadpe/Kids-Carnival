@@ -126,20 +126,49 @@ button:hover {
 }
 
 /* 📱 Responsive */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+  }
+  .overlay {
+    padding: 10px;
+    align-items: flex-start;
+    padding-top: 20px;
+  }
   .game-container {
-    max-width: 95%;
+    max-width: 100%;
     padding: 15px;
+    border-radius: 14px;
   }
   h1 {
-    font-size: 22px;
+    font-size: 20px;
   }
   #quiz-box p {
-    font-size: 22px;
+    font-size: 20px;
+    margin: 15px 0;
   }
   button {
-    font-size: 16px;
+    font-size: 15px;
     padding: 12px;
+  }
+  #answers {
+    gap: 8px;
+  }
+  .minion-img {
+    width: 120px;
+  }
+}
+
+@media (max-width: 400px) {
+  h1 {
+    font-size: 17px;
+  }
+  #quiz-box p {
+    font-size: 17px;
+  }
+  button {
+    font-size: 14px;
+    padding: 10px;
   }
 }
 
@@ -147,7 +176,3 @@ button:hover {
   display: block;
   margin: 20px auto; 
 }
-
-
-
-

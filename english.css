@@ -126,7 +126,57 @@ body {
 }
 
 #next-btn { 
-margin: 20px auto;
+  margin: 20px auto;
 }
 
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+  }
+  .title {
+    font-size: 1.6rem;
+    margin: 15px 10px;
+  }
+  .top-bar {
+    flex-direction: column;
+    gap: 8px;
+    padding: 0 15px;
+  }
+  .quiz-box {
+    width: 92%;
+    margin: 20px auto;
+    padding: 15px;
+  }
+  #question {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+  }
+  .answers button {
+    font-size: 1rem;
+    padding: 10px 15px;
+  }
+  .result-box {
+    width: 92%;
+    padding: 15px;
+  }
+  .next-btn, .restart-btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+  .result-img {
+    width: 110px;
+  }
+}
 
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.3rem;
+  }
+  #question {
+    font-size: 1.2rem;
+  }
+  .answers button {
+    font-size: 0.95rem;
+  }
+}
